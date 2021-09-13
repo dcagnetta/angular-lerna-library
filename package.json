@@ -7,10 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lerna:build": "lerna run build --concurrency=1",
-    "versionup": "lerna version --conventional-commits --no-git-tag-version --yes",
-    "commit-version": "git add . && git commit -m \"chore(release): publish `node -p 'require(\"./lerna.json\").version'`\"",
-    "release": "lerna publish from-package --no-verify-access --yes"
+    "lerna:build": "lerna run build --concurrency=1"
   },
   "private": false,
   "repository": {

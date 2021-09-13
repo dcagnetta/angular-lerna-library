@@ -39,14 +39,14 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: lerna bootstrap
 
-      - name: ⏭ Publish Pre-release package
+      - name: ⏭ Publish Release package
         if: endsWith(github.ref, '/master')
         run: lerna version --conventional-commits --exact --yes && lerna publish --yes --no-verify-access
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: ⏭ Publish Release package
+      - name: ⏭ Publish Pre-release package
         if: endsWith(github.ref, '/develop')
         run: lerna publish --cd-version=prerelease --pre-dist-tag prerelease --preid=alpha.$GITHUB_RUN_NUMBER --exact --yes --no-verify-access
         env:

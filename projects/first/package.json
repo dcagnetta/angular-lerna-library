@@ -1,9 +1,10 @@
 {
   "name": "@codeboss/first",
-  "version": "0.1.1",
+  "version": "0.0.1-alpha.1",
   "publishConfig": {
     "access": "public"
   },
+  "description": "1st Package testing",
   "scripts": {
     "build": "ng build first"
   },
