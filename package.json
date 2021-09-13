@@ -12,7 +12,11 @@
     "commit-version": "git add . && git commit -m \"chore(release): publish `node -p 'require(\"./lerna.json\").version'`\"",
     "release": "lerna publish from-package --no-verify-access --yes"
   },
-  "private": true,
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dcagnetta/angular-lerna-library.git"
+  },
   "dependencies": {
     "first": "file:projects\\@codeboss/first",
     "second": "file:projects\\@codeboss/second"

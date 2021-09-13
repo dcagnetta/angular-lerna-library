@@ -62,6 +62,6 @@ jobs:
      #    prerelease: false
 
       - name: Publish package
-        run: lerna publish from-package --yes --no-verify-access
+        run: lerna publish --yes --no-verify-access
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
